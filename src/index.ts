@@ -1,11 +1,14 @@
 import { Cache, CacheOptions } from './index.d'
+import next from './next'
 
 type InternalCache = { [key: string]: any }
 
-function createCache(options: CacheOptions): Cache {
+function createCache(options?: CacheOptions): Cache {
   let undefinedValue: any = null
-  if (options.hasOwnProperty('undefinedValue')) {
-    undefinedValue = options.undefinedValue
+  if (options) {
+    if (options.hasOwnProperty('undefinedValue')) {
+      undefinedValue = options.undefinedValue
+    }
   }
 
   const internalCache: InternalCache = {}
@@ -15,22 +18,22 @@ function createCache(options: CacheOptions): Cache {
     if (internalCache.hasOwnProperty(key)) {
       value = internalCache[key]
     }
-    process.nextTick(cb, null, value)
+    next(cb, null, value)
   }
 
   const set: Cache['set'] = function(key, value, cb) {
     internalCache[key] = value
-    process.nextTick(cb, null)
+    next(cb, null)
   }
 
   const has: Cache['has'] = function(key, cb) {
     const exists = internalCache.hasOwnProperty(key)
-    process.nextTick(cb, null, exists)
+    next(cb, null, exists)
   }
 
   const remove: Cache['remove'] = function(key, cb) {
     delete internalCache[key]
-    process.nextTick(cb, null)
+    next(cb, null)
   }
 
   const getp: Cache['promise']['get'] = function(key) {

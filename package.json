@@ -3,9 +3,20 @@
   "version": "0.0.0",
   "description": "A caching utility",
   "main": "src/index.ts",
+  "scripts": {
+    "test": "npx jest",
+    "build": "mkdir -p $(pwd)/dist && npx tsc",
+    "cleanup": "rm -rv $(pwd)/dist/**"
+  },
   "author": "Artem E. Knyazev <artem.e.knyazev@yandex.ru>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^11.13.0"
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.0",
+    "babel-jest": "^24.7.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "jest": "^24.7.1",
+    "typescript": "^3.4.2"
   }
 }
