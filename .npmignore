@@ -1,7 +1,13 @@
-package-lock.json
+dist/**/__tests__/*
+dist/**/*.js.map
+src/
 scripts/
+.babelrc
 .editorconfig
 .gitignore
 .huskyrc.json
 .npmignore
 .travis.yml
+jest.config.json
+package-lock.json
+tsconfig.json

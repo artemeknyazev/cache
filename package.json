@@ -1,7 +1,7 @@
 {
   "name": "@artemeknyazev/cache",
   "version": "0.0.0",
-  "description": "A caching utility",
+  "description": "A simple caching utility for Node.js",
   "main": "dist/index.js",
   "scripts": {
     "test": "./scripts/test.sh",
