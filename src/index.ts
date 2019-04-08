@@ -3,7 +3,7 @@ import next from './utils/next'
 
 type InternalCache = { [key: string]: any }
 
-function createCache(options?: CacheOptions): Cache {
+export function createCache(options?: CacheOptions): Cache {
   let undefinedValue: any = null
   if (options) {
     if (options.hasOwnProperty('undefinedValue')) {
@@ -69,5 +69,3 @@ function createCache(options?: CacheOptions): Cache {
     }
   }
 }
-
-export default createCache

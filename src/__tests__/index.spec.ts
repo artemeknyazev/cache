@@ -1,4 +1,4 @@
-import createCache from '../.'
+import { createCache } from '../.'
 
 describe('`cache.has` call', () => {
   describe('for a not present key', () => {

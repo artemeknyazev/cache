@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "umd",
     "target": "esnext",
     "noImplicitAny": true,
     "noImplicitReturns": true,
