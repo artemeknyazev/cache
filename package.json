@@ -1,0 +1,11 @@
+{
+  "name": "cache",
+  "version": "0.0.0",
+  "description": "A caching utility",
+  "main": "src/index.ts",
+  "author": "Artem E. Knyazev <artem.e.knyazev@yandex.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.13.0"
+  }
+}
