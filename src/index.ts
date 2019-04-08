@@ -1,5 +1,5 @@
 import { Cache, CacheOptions } from './index.d'
-import next from './next'
+import next from './utils/next'
 
 type InternalCache = { [key: string]: any }
 
