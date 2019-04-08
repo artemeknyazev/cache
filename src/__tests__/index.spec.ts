@@ -1,6 +1,6 @@
 import createCache from '../.'
 
-describe('cache.has call', () => {
+describe('`cache.has` call', () => {
   describe('for a not present key', () => {
     it('returns false', (done) => {
       const cache = createCache()
@@ -40,7 +40,7 @@ describe('cache.has call', () => {
   })
 })
 
-describe('cache.get call', () => {
+describe('`cache.get` call', () => {
   describe('for a not present key', () => {
     it('returns null by default', (done) => {
       const cache = createCache()
@@ -116,7 +116,7 @@ describe('cache.get call', () => {
   })
 })
 
-describe('cache.set call', () => {
+describe('`cache.set` call', () => {
   describe('for a not present key', () => {
     it('sets a key value', (done) => {
       const cache = createCache()
@@ -200,7 +200,7 @@ describe('cache.set call', () => {
   })
 })
 
-describe('cache.remove call', () => {
+describe('`cache.remove` call', () => {
   describe('for a not present key', () => {
     it('removes nothing', (done) => {
       const cache = createCache()

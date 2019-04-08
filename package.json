@@ -4,7 +4,7 @@
   "description": "A caching utility",
   "main": "src/index.ts",
   "scripts": {
-    "test": "npx jest",
+    "test": "npx jest --config jest.config.json",
     "build": "mkdir -p $(pwd)/dist && npx tsc",
     "cleanup": "rm -rv $(pwd)/dist/**"
   },
