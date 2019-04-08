@@ -1,0 +1,7 @@
+package-lock.json
+scripts/
+.editorconfig
+.gitignore
+.huskyrc.json
+.npmignore
+.travis.yml
